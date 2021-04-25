@@ -1,0 +1,141 @@
+body {
+    min-height:100%;
+    margin:0;
+}
+
+.header {
+    font-size: 3rem;
+    text-align: center;
+    background-color: aliceblue;
+    /* height: 170px; */
+    margin: 0px auto;
+    padding: 60px;
+    border-bottom: 2px solid black;
+}
+.header h1 {
+    margin:0px;
+}
+
+.interactive-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.interactive-button button {
+    font-size: 2rem;
+    padding: 20px;
+    background-color: aliceblue;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hold {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* width: 39%; */
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out;
+    z-index: 999;
+}
+
+.form {
+    /*width: 20%;*/
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+}
+
+.hold .form h2 {
+    font-size:2rem;
+}
+
+.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.form .fields {
+    width:80%;
+    padding:20px;
+    margin:20px;
+    font-size:2rem;
+}
+
+.form button {
+    /*width:10%;*/
+    padding:15px;
+    font-size:2rem;
+}
+
+.results-container {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr [col-start]);
+    text-align: center;
+    grid-gap: 1rem;
+}
+
+.results .card {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+.results .card button {
+    padding: 15px;
+    font-size: 1.4rem;
+    margin-top: 0px;
+    margin:15px;
+    border-radius: 1rem;
+}
+
+.results .card .indi {
+    font-size:2rem;
+}
+
+.readYet {
+    width: 80%;
+    padding: 20px;
+    margin: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.readYet #radioCheck {
+    margin:0px;
+    width:10%;
+}
+
+.overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:  rgba(0, 0, 0, 0.5);
+    display:none;
+}
+
+.overlay-active {
+    display:block;
+}
+
+.hasRead {
+    background-color: lightseagreen;
+}
+
+.notRead {
+    background-color: lightpink;
+}
+
+.remove-button {
+    background-color: red;
+}

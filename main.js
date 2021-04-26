@@ -81,19 +81,19 @@ const displayController = (() => {
         if (tieGame.length === lengthOfArray) player1.tie();
     }
 
-    const updateTurn = ({ hasTurn, mark }) => {
+    const updateTurn = ({ hasTurn, mark, foundWinner }) => {
         const p1 = document.getElementById('p1');
         const p2 = document.getElementById('p2');
-        if (mark === ("x") && hasTurn === true) {
+        if (mark === ("x") && hasTurn === true && foundWinner === false ) {
             p1.innerHTML = "Player 1's Turn";
         }
-        if (mark === ("x") && hasTurn === false) {
+        if (mark === ("x") && hasTurn === false && foundWinner === false) {
             p1.innerHTML = "";
         }
-        if (mark === ("o") && hasTurn === true) {
+        if (mark === ("o") && hasTurn === true && foundWinner === false) {
             p2.innerHTML = "Player 2's Turn";
         }
-        if (mark === ("o") && hasTurn === false) {
+        if (mark === ("o") && hasTurn === false && foundWinner === false) {
             p2.innerHTML = "";
         }
     }

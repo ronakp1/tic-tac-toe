@@ -2,6 +2,7 @@ body {
     width: 100%;
     height: 100vh;
     margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .main {
@@ -19,7 +20,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     width: 50%;
-    height: 100%;
+    height: 85%;
     margin: 0;
 }
 
@@ -33,7 +34,7 @@ body {
 }
 
 .board .selection {
-    font-size: 15rem;
+    font-size: 10rem;
     text-align: center;
     cursor: pointer;
     margin:0 auto;

@@ -46,37 +46,16 @@ body {
         width: 100%;
     }
 
-    #one {
+    #one #two #four #five {
         border-right: $border-right;
         border-bottom: $border-bottom;
     }
 
-    #two {
-        border-right: $border-right;
+    #three #six {
         border-bottom: $border-bottom;
     }
 
-    #three {
-        border-bottom: $border-bottom;
-    }
-
-    #four {
-        border-right: $border-right;
-        border-bottom: $border-bottom;
-    }
-
-    #five {
-        border-right: $border-right;
-        border-bottom: $border-bottom;
-    }
-    #six {
-        border-bottom: $border-bottom;
-    }
-
-    #seven {
-        border-right: $border-right;
-    }
-    #eight {
+    #seven #eight {
         border-right: $border-right;
     }
 }

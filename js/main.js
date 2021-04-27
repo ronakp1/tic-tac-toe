@@ -17,7 +17,7 @@ const gameBoard = (() => {
 const player = (mark, hasTurn, foundWinner) => {
     const hasWon = () => `${mark} has won!`;
     const outTurn = () => console.log(hasTurn);
-    const tie = () => console.log("It's a tie!");
+    const tie = () => `It's a tie!`
     return { mark, hasTurn, foundWinner, hasWon, outTurn, tie, };
 }
 const newGame = gameBoard;
@@ -78,13 +78,16 @@ const displayController = (() => {
     const checkTie = () => {
         const lengthOfArray = currentGameBoard.length;
         const tieGame = currentGameBoard.filter(word => word.length > 0);
-        if (tieGame.length === lengthOfArray) player1.tie();
+        if (tieGame.length === lengthOfArray) {
+            p1.innerHTML = player1.tie();
+            p2.innerHTML = player2.tie();
+        }
     }
 
     const updateTurn = ({ hasTurn, mark, foundWinner }) => {
         const p1 = document.getElementById('p1');
         const p2 = document.getElementById('p2');
-        if (mark === ("x") && hasTurn === true && foundWinner === false ) {
+        if (mark === ("x") && hasTurn === true && foundWinner === false) {
             p1.innerHTML = "Player 1's Turn";
         }
         if (mark === ("x") && hasTurn === false && foundWinner === false) {
@@ -118,7 +121,7 @@ const displayController = (() => {
                     const p2 = document.getElementById('p2');
                     p2.innerHTML = "Player 2's Turn";
                     if (currentGameBoard[index] === '')
-                    updateTurn(player1); {
+                        updateTurn(player1); {
                         placeMarker(player2, e, index)
                         player1.hasTurn = true;
                         player2.hasTurn = false;
